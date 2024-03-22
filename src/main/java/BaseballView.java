@@ -22,12 +22,12 @@ public class BaseballView {
 	}
 
 	public void printControlError() {
-		System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+		System.out.println("[ERROR] 잘못된 입력입니다. 다시 입력해주세요.");
 	}
 
 	public void printResult(BaseballResult result) {
 		if (result == null) {
-			System.out.println("잘못된 입력입니다. 다시 입력해주세요.");
+			System.out.println("[ERROR] 잘못된 입력입니다. 다시 입력해주세요.");
 			return;
 		}
 		if (result.isNothing()) {
