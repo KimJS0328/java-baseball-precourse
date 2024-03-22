@@ -19,6 +19,10 @@ public class BaseballResult {
 		return strike == 3;
 	}
 
+	public boolean isNothing() {
+		return strike == 0 && ball == 0;
+	}
+
 	public int getBall() {
 		return ball;
 	}
