@@ -39,10 +39,7 @@ public class Baseball {
 		int digitCount;
 		for (digitCount = 0; number > 0; ++digitCount, number /= 10) {
 			int digit = number % 10;
-			if (digit == 0) {
-				return false;
-			}
-			if (isDigitUsed[digit]) {
+			if (digit == 0 || isDigitUsed[digit]) {
 				return false;
 			}
 			isDigitUsed[digit] = true;

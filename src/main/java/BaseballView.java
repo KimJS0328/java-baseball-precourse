@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class BaseballView {
-	private Scanner scanner;
+	private final Scanner scanner;
 	public BaseballView() {
 		scanner = new Scanner(System.in);
 	}
@@ -34,7 +34,6 @@ public class BaseballView {
 			System.out.println("낫싱");
 			return;
 		}
-
 		if (result.getStrike() != 0) {
 			System.out.printf("%d스트라이크 ", result.getStrike());
 		}
