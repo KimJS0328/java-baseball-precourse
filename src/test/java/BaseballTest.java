@@ -75,4 +75,12 @@ public class BaseballTest {
 		BaseballResult result = model.compareNumber(userNumber);
 		assertThat(result.getStrike() == 0 && result.getBall() == 3).isTrue();
 	}
+
+	@ParameterizedTest
+	@CsvSource({"123,456", "695,784"})
+	void compareNumber_ShouldReturnNothingResult(int computerNumber, int userNumber) {
+		model.setComputerNumber(computerNumber);
+		BaseballResult result = model.compareNumber(userNumber);
+		assertThat(result.isNothing()).isTrue();
+	}
 }
